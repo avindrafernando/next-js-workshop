@@ -1,0 +1,14 @@
+header {
+  width: 100%;
+  padding: 0 40px;
+  background: #212121;
+  color: #fff;
+  align-items: center;
+  justify-content: flex-start;
+  display: flex;
+  gap: 20px;
+}
+
+body {
+  margin: 0;
+}
