@@ -1,0 +1,16 @@
+import styles from "./conference.module.css";
+
+export default function ConferenceLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <>
+      <header className={styles.header}>
+        <h2>Globomantics Maniacally Taking Tech to the Globe</h2>
+      </header>
+      <section>{children}</section>
+    </>
+  );
+}
