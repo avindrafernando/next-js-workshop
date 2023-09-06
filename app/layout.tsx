@@ -2,6 +2,7 @@ import "./globals.css";
 import styles from "./page.module.css";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { localUbuntuFont, openSans } from "./fonts";
 
 export const metadata: Metadata = {
   title: "Globomantics App",
@@ -14,14 +15,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={openSans.className}>
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body>
         <header>
           <h1>
-            <Link className={styles.homeLink} href="/">
+            <Link
+              className={`${styles.homeLink} ${localUbuntuFont.className}`}
+              href="/"
+            >
               GLOBOMANTICS
             </Link>
           </h1>
