@@ -1,6 +1,3 @@
-import styles from "./conference.module.css";
-import { raleway } from "../fonts";
-
 export default function ConferenceLayout({
   children,
 }: {
@@ -8,9 +5,6 @@ export default function ConferenceLayout({
 }) {
   return (
     <>
-      <header className={`${styles.header} ${raleway.className}`}>
-        <h2>Globomantics Maniacally Taking Tech to the Globe</h2>
-      </header>
       <section>{children}</section>
     </>
   );
