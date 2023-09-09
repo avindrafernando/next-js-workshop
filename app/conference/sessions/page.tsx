@@ -1,3 +1,4 @@
+import Badge from "@/app/components/Badge/Badge";
 import styles from "../conference.module.css";
 import { SpeakerSummary } from "../speakers/page";
 import {
@@ -49,7 +50,7 @@ export default async function Sessions() {
                   return (
                     <h3 key={id} className={styles.titleText}>
                       Speaker: {speakerDetails.name}
-                      {speakerDetails?.featured && " (Featured)"}
+                      {speakerDetails?.featured && <Badge text="Featured" />}
                     </h3>
                   );
                 })}
