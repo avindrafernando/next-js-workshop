@@ -1,6 +1,6 @@
-import { NextFont } from "@next/font";
+import { NextFont } from "next/font";
 import localFont from "next/font/local";
-import { Open_Sans, Raleway } from "@next/font/google";
+import { Open_Sans, Raleway } from "next/font/google";
 
 export const openSans = Open_Sans({
   subsets: ["latin"],
