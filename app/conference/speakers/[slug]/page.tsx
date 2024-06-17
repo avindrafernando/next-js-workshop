@@ -1,5 +1,5 @@
 import styles from "../../conference.module.css";
-import { Speaker, SpeakerSummary } from "../page";
+import type { Speaker, SpeakerSummary } from "../page";
 import { getSpeakerDetails } from "../services/speakers";
 
 type SpeakerWithSessions = Speaker & { sessions?: Array<any> };
