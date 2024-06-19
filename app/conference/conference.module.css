@@ -18,6 +18,14 @@
   background-color: #262630;
   padding: 10px;
 }
+.skeletonContainer {
+  display: block;
+  box-sizing: inherit;
+  margin-top: 1rem;
+  background-color: lightgray;
+  padding: 10px;
+  height: 200px;
+}
 
 .titleText {
   text-align: center;
