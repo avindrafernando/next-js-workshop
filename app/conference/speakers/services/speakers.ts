@@ -1,26 +1,19 @@
 import { Speaker } from "../page";
+import { SPEAKERS_URL } from "@/lib/constants";
 
 export async function fetchSpeakers() {
   // Static Data Fetching
-  const speakers = await fetch(
-    `https://raw.githubusercontent.com/adhithiravi/Consuming-GraphqL-Apollo/master/api/data/speakers.json`
-  );
+  const speakers = await fetch(SPEAKERS_URL);
 
   // Static Data Fetching with Revalidation
-  //   const speakers = await fetch(
-  //     `https://raw.githubusercontent.com/adhithiravi/Consuming-GraphqL-Apollo/master/api/data/speakers.json`,
-  //     {
-  //       next: { revalidate: 5 },
-  //     }
-  //   );
+  // const speakers = await fetch(SPEAKERS_URL, {
+  //   next: { revalidate: 5 },
+  // });
 
   // Dynamic Data Fetching
-  //   const speakers = await fetch(
-  //     `https://raw.githubusercontent.com/adhithiravi/Consuming-GraphqL-Apollo/master/api/data/speakers.json`,
-  //     {
-  //       cache: "no-cache",
-  //     }
-  //   );
+  // const speakers = await fetch(SPEAKERS_URL, {
+  //   cache: "no-cache",
+  // });
 
   return speakers.json();
 }
