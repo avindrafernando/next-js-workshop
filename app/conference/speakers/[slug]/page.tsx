@@ -1,13 +1,12 @@
 import styles from "../../conference.module.css";
 import type { Speaker, SpeakerSummary } from "../page";
 import { getSpeakerDetails } from "../services/speakers";
+import { SPEAKERS_URL } from "@/lib/constants";
 
 type SpeakerWithSessions = Speaker & { sessions?: Array<any> };
 
 export async function generateStaticParams() {
-  const speakersResponse = await fetch(
-    `https://raw.githubusercontent.com/adhithiravi/Consuming-GraphqL-Apollo/master/api/data/speakers.json`
-  );
+  const speakersResponse = await fetch(SPEAKERS_URL);
 
   const speakers = await speakersResponse.json();
   return speakers.speakers.map(({ id }: Speaker) => ({
@@ -16,9 +15,7 @@ export async function generateStaticParams() {
 }
 
 async function getSpeakerInfo(slug: string) {
-  const speakers = await fetch(
-    `https://raw.githubusercontent.com/adhithiravi/Consuming-GraphqL-Apollo/master/api/data/speakers.json`
-  );
+  const speakers = await fetch(SPEAKERS_URL);
 
   let speakersList = await speakers.json();
   speakersList = speakersList.speakers;
